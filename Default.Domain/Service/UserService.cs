@@ -24,7 +24,7 @@ namespace Default.Domain.Service
             Email email = new Email(request.Email);
             email.Endereco = "ricardosena";
          
-            User user = new User(nome, email, request.PassWord, Enuns.EnumStatus.Ativo);
+            User user = new User(nome, email, request.PassWord, Enuns.EnumAtivo.Ativo);
        
            
             if(user.PassWord.Length < 3)

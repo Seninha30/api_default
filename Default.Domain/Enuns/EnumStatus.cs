@@ -1,6 +1,6 @@
 ﻿namespace Default.Domain.Enuns
 {
-    public enum EnumStatus
+    public enum EnumAtivo
     {
         Ativo,
         Inativo
