@@ -15,6 +15,6 @@ namespace Default.Domain.ObjectValues
                   .IfNotEmail(x => x.Endereco, Msg.X0_INVALIDO.ToFormat("e-mail"));
         }
 
-        public string Endereco { get; set; }
+        public string Endereco { get; private set; }
     }
 }

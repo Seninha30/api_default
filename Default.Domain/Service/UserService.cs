@@ -22,7 +22,6 @@ namespace Default.Domain.Service
             Nome nome = new Nome(request.PrimeiroNome, request.UltimoNome);
 
             Email email = new Email(request.Email);
-            email.Endereco = "ricardosena";
          
             User user = new User(nome, email, request.PassWord, Enuns.EnumAtivo.Ativo);
        
