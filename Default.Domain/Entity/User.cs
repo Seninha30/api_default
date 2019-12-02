@@ -1,5 +1,6 @@
 ﻿using Default.Domain.Entity.Base;
 using Default.Domain.Enuns;
+using Default.Domain.Extensions;
 using Default.Domain.ObjectValues;
 using Default.Domain.Resources;
 using prmToolkit.NotificationPattern;
@@ -17,10 +18,11 @@ namespace Default.Domain.Entity
             PassWord = passWord;
             SetAtivo(status);
             new AddNotifications<User>(this)
-                .IfNullOrInvalidLength(x => x.PassWord, 3, 25, Msg.X0_OBRIGATORIA_E_DEVE_CONTER_ENTRE_X1_E_X2_CARACTERES.ToFormat("passWord", 2, 25));
-
-
+                .IfNullOrInvalidLength(x => x.PassWord, 3, 25, Msg.X0_OBRIGATORIA_E_DEVE_CONTER_ENTRE_X1_E_X2_CARACTERES.ToFormat("passWord", 3, 25));
             AddNotifications(nome, email);
+
+            PassWord = PassWord.ConvertToMd5();
+
         }
 
         public Nome Nome { get; private set; }

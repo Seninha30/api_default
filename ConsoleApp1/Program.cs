@@ -11,7 +11,7 @@ namespace ConsoleApp1
             UserService service = new UserService();
             UserRequest user = new UserRequest();
 
-            user.PassWord = "13";
+            user.PassWord = "ricar12";
             user.PrimeiroNome = "Ricardo";
             user.UltimoNome = "Sena";
             user.Email = "ricardoaraujosena@gmail.com";
