@@ -7,6 +7,11 @@ namespace Default.Domain.ObjectValues
 {
     public class Nome : Notifiable
     {
+        public Nome(string primeiroNome)
+        {
+            PrimeiroNome = primeiroNome;
+        }
+
         public Nome(string primeiroNome, string ultimoNome)
         {
             PrimeiroNome = primeiroNome;

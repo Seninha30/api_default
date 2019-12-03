@@ -10,6 +10,12 @@ namespace Default.Domain.Entity
 {
     public class User : BaseEntity
     {
+        public User(Email email, string passWord)
+        {
+            Email = email;
+            PassWord = passWord.ConvertToMd5();
+        }
+
         //todo criar classe base para conter Id e datas de criação, alterção e o status
         public User(Nome nome, Email email, string passWord, EnumAtivo status)
         {
