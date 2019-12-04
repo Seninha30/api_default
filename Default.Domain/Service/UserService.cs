@@ -71,7 +71,6 @@ namespace Default.Domain.Service
             }
 
             return (UserAutenticResponse)user;
-
         }
     }
 }
