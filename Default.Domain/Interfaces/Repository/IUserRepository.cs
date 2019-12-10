@@ -6,7 +6,7 @@ namespace Default.Domain.Interfaces.Repository
     {
         User ObterPorId(int id);
         User Obter(string email, string password);
-        int Add(User user);
+        void Add(User user);
         bool Exist(string email);
     }
 }

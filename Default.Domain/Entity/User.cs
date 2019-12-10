@@ -10,6 +10,11 @@ namespace Default.Domain.Entity
 {
     public class User : BaseEntity
     {
+        public User()
+        {
+            //usado pelo ORM
+        }
+
         public User(Email email, string passWord)
         {
             Email = email;

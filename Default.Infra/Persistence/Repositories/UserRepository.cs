@@ -1,28 +1,37 @@
 ﻿using Default.Domain.Entity;
 using Default.Domain.Interfaces.Repository;
+using Default.Infra.Persistence.EF;
+using System.Linq;
 
 namespace Default.Infra.Persistence.Repositories
 {
     public class UserRepository : IUserRepository
     {
-        public int Add(User user)
+        private readonly DefaultContext _userContext;
+
+        public UserRepository(DefaultContext userContext)
         {
-            throw new System.NotImplementedException();
+            _userContext = userContext;
+        }
+
+        public void Add(User user)
+        {
+            _userContext.Add(user);
         }
 
         public bool Exist(string email)
         {
-            throw new System.NotImplementedException();
+            return _userContext.Users.Any(x => x.Email.Endereco == email);
         }
 
         public User Obter(string email, string password)
         {
-            throw new System.NotImplementedException();
+            return _userContext.Users.FirstOrDefault(x => x.Email.Endereco == email && x.PassWord == password);
         }
 
         public User ObterPorId(int id)
         {
-            throw new System.NotImplementedException();
+            return _userContext.Users.FirstOrDefault(x => x.Id == id);
         }
     }
 }

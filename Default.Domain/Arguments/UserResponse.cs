@@ -11,8 +11,8 @@ namespace Default.Domain.Arguments
         {
             return new UserResponse()
             {
-                Id = resp.Id;
-          }
+                Id = resp.Id
+            };
         }
     }
 }

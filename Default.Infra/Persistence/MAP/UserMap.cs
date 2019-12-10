@@ -1,6 +1,7 @@
 ﻿
 
 using Default.Domain.Entity;
+using Default.Domain.Enuns;
 using Default.Domain.ObjectValues;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
@@ -11,11 +12,11 @@ namespace Default.Infra.Persistence.MAP
     {
         public void Configure(EntityTypeBuilder<User> builder)
         {
-            builder.ToTable("User");
+            builder.ToTable("Users");
 
             builder.HasKey(x => x.Id);
 
-            builder.Property(x => x.Ativo).HasDefaultValue(true);
+            builder.Property(x => x.Ativo).HasDefaultValue(EnumAtivo.Ativo);
             builder.Property(x => x.DataCriacao);
             builder.Property(x => x.DataAlteracao).IsRequired();
             builder.Property(x => x.PassWord).HasMaxLength(36).IsRequired();

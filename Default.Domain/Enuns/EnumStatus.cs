@@ -1,8 +1,8 @@
 ﻿namespace Default.Domain.Enuns
 {
-    public enum EnumAtivo
+    public enum EnumAtivo : byte
     {
-        Ativo,
-        Inativo
+        Ativo = 0,
+        Inativo = 1
     }
 }

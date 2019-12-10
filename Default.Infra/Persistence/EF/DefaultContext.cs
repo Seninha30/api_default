@@ -13,20 +13,20 @@ namespace Default.Infra.Persistence.EF
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             //todo ajustar a connection string na classe startup
-            optionsBuilder.UseSqlServer("connctionString");
+            optionsBuilder.UseSqlServer("server=localhost;database=Default;uid=sa;password=p@ssw0rd;");
             base.OnConfiguring(optionsBuilder);
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            base.OnModelCreating(modelBuilder);
-
             //ignorar classes
             modelBuilder.Ignore<Notification>();
             modelBuilder.Ignore<Nome>();
             modelBuilder.Ignore<Email>();
 
             modelBuilder.ApplyConfiguration(new UserMap());
+
+            base.OnModelCreating(modelBuilder);
 
         }
     }
