@@ -1,5 +1,4 @@
 ﻿using Default.Domain.Interfaces;
-using Default.Domain.Interfaces.Services.Base;
 using Default.Infra.Transactions;
 using Default.Web.Controllers.Base;
 using Microsoft.AspNetCore.Mvc;

@@ -123,6 +123,9 @@
   <data name="DADOS_NAO_ENCONTRADOS" xml:space="preserve">
     <value>Dados não encontrados.</value>
   </data>
+  <data name="EMAILS_NAO_CONFEREM" xml:space="preserve">
+    <value>E-mails não conferem</value>
+  </data>
   <data name="JA_EXISTE_UMA_X0_CHAMADA_X1" xml:space="preserve">
     <value>Já existe uma {0} chamada {1}.</value>
   </data>

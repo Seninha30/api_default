@@ -7,7 +7,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Default.Domain", "Default.D
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Default.Infra", "Default.Infra\Default.Infra.csproj", "{EB8180D8-B8BA-4D90-A110-89246C2EE004}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Default.Web", "Default.Web\Default.Web.csproj", "{B70E29DB-1BE8-4BE7-A435-574D9247F1AA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Default.Web", "Default.Web\Default.Web.csproj", "{B70E29DB-1BE8-4BE7-A435-574D9247F1AA}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Presentation", "Presentation", "{4DD433DD-697B-495D-962E-32803B23CCEB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -30,6 +32,9 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{B70E29DB-1BE8-4BE7-A435-574D9247F1AA} = {4DD433DD-697B-495D-962E-32803B23CCEB}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {89DEC6B2-1082-48D4-898C-DBD978155E66}

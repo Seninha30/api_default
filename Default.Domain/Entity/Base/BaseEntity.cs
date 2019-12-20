@@ -6,7 +6,7 @@ namespace Default.Domain.Entity.Base
 {
     public abstract class BaseEntity : Notifiable
     {
-        public int Id { get; private set; }
+        public int Id { get;  set; }
         public DateTime DataCriacao { get; private set; }
         public DateTime DataAlteracao { get; private set; }
         public EnumAtivo Ativo { get; private set; }

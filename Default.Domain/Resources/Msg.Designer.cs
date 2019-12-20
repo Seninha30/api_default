@@ -79,6 +79,15 @@ namespace Default.Domain.Resources {
         }
         
         /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a E-mails não conferem.
+        /// </summary>
+        public static string EMAILS_NAO_CONFEREM {
+            get {
+                return ResourceManager.GetString("EMAILS_NAO_CONFEREM", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Consulta uma cadeia de caracteres localizada semelhante a Já existe um {0} chamado {1}..
         /// </summary>
         public static string JA_EXISTE_UM_X0_CHAMADO_X1 {
