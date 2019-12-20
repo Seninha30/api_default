@@ -15,6 +15,7 @@ namespace Default.Web.Controllers
         public UserController(IUserService userService, IUnitOfWork unitOfWork) : base(unitOfWork)
         {
             _userService = userService;
+
         }
 
         [HttpPost]
